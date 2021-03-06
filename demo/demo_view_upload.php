@@ -141,7 +141,7 @@ if($foundRecord)
 			</td>
 		</tr>
 	</table>
-<?
+<?php
 }else{//no such muffin!
     echo '<div align="center">What! No such muffin? There must be a mistake!!</div>';
     echo '<div align="center"><a href="' . VIRTUAL_PATH . 'demo/demo_list_upload.php">Another Muffin?</a></div>';

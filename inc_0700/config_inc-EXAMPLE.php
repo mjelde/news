@@ -52,8 +52,8 @@ header("Cache-Control: no-cache");header("Expires: -1");#Helps stop browser & pr
 
 # START CONSTANTS & PATHS (universal file paths & values)-----------------------------------------------------------------
 /* automatic path settings - use the following 4 path settings for placing all code in one application folder */ 
-define('VIRTUAL_PATH', $protocol . $_SERVER["HTTP_HOST"] . '/' . $sub_folder;); # Virtual (web) 'root' of application for images, JS & CSS files
-define('PHYSICAL_PATH', $_SERVER["DOCUMENT_ROOT"] . '/' . $sub_folder;); # Physical (PHP) 'root' of application for file & upload reference
+define('VIRTUAL_PATH', $protocol . $_SERVER["HTTP_HOST"] . '/' . $sub_folder); # Virtual (web) 'root' of application for images, JS & CSS files
+define('PHYSICAL_PATH', $_SERVER["DOCUMENT_ROOT"] . '/' . $sub_folder); # Physical (PHP) 'root' of application for file & upload reference
 define('INCLUDE_PATH', PHYSICAL_PATH . 'inc_0700/'); # Path to PHP include files - INSIDE APPLICATION ROOT
 //define('INCLUDE_PATH', '/home/classes/horsey01/inc_cotlets/'); #Path to PHP include files - OUTSIDE WEB ROOT
 define('LOG_PATH', INCLUDE_PATH . 'log/'); # Log files are stored in the PHP include folder
