@@ -1,0 +1,3 @@
+[Feb-18-2021 9:31:32] Table 'it262_protosite_db.test_Customers' doesn't exist in /home/ns930/nightscrawl.net/edu/it262-php2/winter-2021/app/demo/demo_shared.php on line 47
+[Feb-18-2021 9:48:08] Table 'it262_protosite_db.test_Muffins' doesn't exist in /home/ns930/nightscrawl.net/edu/it262-php2/winter-2021/app/inc_0700/Pager_inc.php on line 140
+[Feb-18-2021 14:16:31] SQL statement must include a single space on each side of the SQL keyword ' from ' in /home/ns930/nightscrawl.net/edu/it262-php2/winter-2021/inc_0700/Pager_inc.php on line 136
