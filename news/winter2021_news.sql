@@ -31,6 +31,7 @@ VALUES(
     'Feed Name 1'
 );
 
+
 INSERT INTO winter2021_feed_categories
 VALUES(
     NULL,
