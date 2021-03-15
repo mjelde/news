@@ -22,7 +22,7 @@ echo "<?xml version=\"1.0\" encoding=\"iso-8859-1\"?".">\n"; //xml uses ?, so we
 	<?php include INCLUDE_PATH . 'meta_inc.php'; ?>
 	<link href="<?php echo VIRTUAL_PATH; ?>include/default_style.css" rel="stylesheet" type="text/css" />
 	<style type="text/css">
-	 .somethingcouldgohere {}
+	 /* .somethingcouldgohere {} */
 	</style>
 </head>
 <body>
