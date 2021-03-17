@@ -74,7 +74,6 @@ class Feed {
 
 		# attempt to create category objects
 		$sql = sprintf("select FeedCategoryID, CategoryName, CategoryURL from " . PREFIX . "feed_categories where FeedID =%d", $this->FeedID);
-
 		$result = mysqli_query(\IDB::conn(),$sql) or die(trigger_error(mysqli_error(\IDB::conn()), E_USER_ERROR));
 		if (mysqli_num_rows($result) > 0) { # show results
 
@@ -104,15 +103,15 @@ class Feed {
 
 			foreach($this->aCategory as $category) { # print data for each
 				$myReturn .= '
-				<tr>
-					<td><a href="' . VIRTUAL_PATH . 'news/article_view.php?id=' . $category->FeedCategoryID . '">' . $category->CategoryName . '</a></td>
-				</tr>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">' . $category->CategoryName . '</h3>
+						</div>
+						<div class="panel-body">
+							<a href="' . $category->CategoryURL . '">' . $category->CategoryURL . '</a>						
+						</div>
+					</div>
 				';
-
-				// <div class="panel-body">
-				// 	<a href="' . $category->CategoryURL . '">' . $category->CategoryURL . '</a>
-				// 	<a href="' . VIRTUAL_PATH . 'news/article_view.php?id=' . $category->FeedCategoryID . '">' . $category->CategoryName . '</a>
-				// </div>
 
 				// echo $category->FeedCategoryID . " ";
 				// echo $category->CategoryName . " ";

@@ -75,35 +75,23 @@ if(mysqli_num_rows($result) > 0) { # records exist - process
 		$itemz = "Feeds";
 	}  // deal with plural
     
-	echo '
-		<table class="table table-hover">
-			<thead>
-				<tr>
-					<th scope="col">Feed Name</th>
-					<th scope="col">Feed Description</th>
-				</tr>
-			</thead>
-		<tbody>  
-	';	
-	
-	echo '<div align="center">We have ' . $myPager->showTotal() . ' ' . $itemz . '!</div>';
+	// echo '<div align="center">We have ' . $myPager->showTotal() . ' ' . $itemz . '!</div>';
 
 	while($row = mysqli_fetch_assoc($result)) { # process each row
-        //echo '<div align="center"><a href="' . VIRTUAL_PATH . 'surveys/survey_view.php?id=' . (int)$row['SurveyID'] . '">' . dbOut($row['Title']) . '</a>';
-        //echo '</div>';
 
 		echo '
-			<tr>
-				<td><a href="' . VIRTUAL_PATH . 'news/news_view.php?id=' . (int)$row['FeedID'] . '">' . dbOut($row['FeedName']) . '</a></td>
-				<td>' . dbOut($row['FeedDescription']) . '</td>
-			</tr>
+		
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title"><a href="' . VIRTUAL_PATH . 'news/news_view.php?id=' . (int)$row['FeedID'] . '">' . dbOut($row['FeedName']) . '</a></h3>
+				</div>
+				<div class="panel-body">					
+					' . dbOut($row['FeedDescription']) . '
+				</div>
+			</div>		
 		';
-	}
 
-	echo '
-			</tbody>
-		</table>
-	';
+	}
 
 	echo $myPager->showNAV(); # show paging nav, only if enough records
 

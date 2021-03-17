@@ -1732,10 +1732,10 @@ th {
 .table > thead > tr > td,
 .table > tbody > tr > td,
 .table > tfoot > tr > td {
-  padding: 8px;
+  padding: 10px;
   line-height: 1.428571429;
   vertical-align: top;
-  border-top: 1px solid #dddddd;
+  border-top: 1px solid #aaa;
 }
 
 .table > thead > tr > th {
@@ -6078,12 +6078,12 @@ a.list-group-item.active:focus .list-group-item-text {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 16px;
-  color: inherit;
+  /* color: inherit; */
 }
 
-.panel-title > a {
+/* .panel-title > a {
   color: inherit;
-}
+} */
 
 .panel-footer {
   padding: 10px 15px;
@@ -7689,3 +7689,9 @@ td.visible-print {
 .affix {
   position: fixed;
 }
+
+
+.news-date {
+  min-width: 175px;
+}
+
