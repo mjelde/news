@@ -21,7 +21,7 @@
 # START SETTINGS (show or hide page errors, turn on/off error logging)---------------------------------------------
 # We can un-comment the line below to either see default errors (1) or shut off visual errors completely (0). 
 //ini_set('error_reporting', E_ALL | E_STRICT);  # E_ALL | E_STRICT = currently tracking all errors & warnings
-$sub_folder = 'YOUR-PATH/news/'; // If app installed in subfolder, place here.  name of folder, no leading or trailing forward or backslash
+$sub_folder = 'it262/Project/news/'; // If app installed in subfolder, place here.  name of folder, no leading or trailing forward or backslash
 define('SHOW_ALL_ERRORS', true); # TRUE = SHOW ALL SITE ERRORS - if FALSE must be logged in as ADMIN to view errors
 define('LOG_ALL_ERRORS', true); # TRUE = TRACK ALL ERRORS IN ERROR LOG FILE (UPDATED 7/14 FOR ZEPHIR!)
 define('SECURE', true); # true forces secure connection, https, for all site pages
@@ -58,7 +58,7 @@ define('INCLUDE_PATH', PHYSICAL_PATH . 'inc_0700/'); # Path to PHP include files
 //define('INCLUDE_PATH', '/home/classes/horsey01/inc_cotlets/'); #Path to PHP include files - OUTSIDE WEB ROOT
 define('LOG_PATH', INCLUDE_PATH . 'log/'); # Log files are stored in the PHP include folder
 define('ADMIN_PATH', VIRTUAL_PATH . 'admin/'); # Admin files are in subfolder
-define('SUPPORT_EMAIL', 'kaynbell@gmail.com'); # Email of site support
+define('SUPPORT_EMAIL', 'thomas-ti-hall@gmail.com'); # Email of site support
 define('PREFIX', 'winter2021_'); #Adds uniqueness to DB table names.  Limits hackability, naming collisions.  In WordPress the prefix is wp_
 define('THIS_PAGE', basename($_SERVER['PHP_SELF'])); # Current page name, stripped of folder info - (saves resources)
 # END CONSTANTS & PATHS (universal file paths & values)--------------------------------------------------------------------
@@ -68,6 +68,7 @@ include INCLUDE_PATH . 'credentials_inc.php'; # Stores DB credentials - part of 
 include INCLUDE_PATH . 'common_inc.php'; # Provides common utility functions - part of nmCommon package
 include INCLUDE_PATH . 'custom_inc.php'; # Provides spot for custom utility functions - part of nmCommon package
 include INCLUDE_PATH . 'MyAutoLoader.php'; #Allows multiple versions of AutoLoaded classes
+include INCLUDE_PATH . 'Pager_inc.php';
 # END INCLUDES (reference include files)---------------------------------------------------------------------
 
 # CONTENT CONFIGURATION AREA (theme, content areas & nav arrays for header/footer )-----------------------------------------

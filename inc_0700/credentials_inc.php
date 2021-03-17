@@ -12,7 +12,7 @@
  */
 
 //place credentials here:
-define('DB_NAME','DATABASE-NAME');
-define('DB_USER','DATABASE-USER');
-define('DB_PASSWORD','DATABASE-PASS');
-define('DB_HOST','mysql.EXAMPLE.COM');
+define('DB_NAME','ti_client_protosite');
+define('DB_USER','titanium');
+define('DB_PASSWORD','Atropal.311');
+define('DB_HOST','mysql.thomas-ti-hall.com');
