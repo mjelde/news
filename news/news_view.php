@@ -44,7 +44,25 @@ get_header(); # defaults to theme header or header_inc.php
 
 if($myFeed->isValid) { # check to see if we have a valid FeedID
 	echo '<p>' . $myFeed->FeedDescription . '</p>';
+
+	echo '	
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th scope="col">Feed Category</th>
+				</tr>
+			</thead>
+			<tbody>  
+	';
+
 	echo $myFeed->showCategories();
+
+	echo '
+			</tbody>
+		</table>	
+	';
+
+
 } else {
 	echo "Sorry, no such feed!";	
 }
